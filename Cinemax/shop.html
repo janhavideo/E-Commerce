@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cinemax</title>
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<!-- HEADER SECTION -->
+	<div class="col-xs-12 no_padding headerSection">
+		<nav class="navbar navbar-inverse menulist">
+		  <div class="container-fluid">
+		  	<div class="navbar-header">
+		      	<a class="navbar-brand" href="home.html">CINEMAX</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      	<li><a href="home.html">HOME</a></li>
+		      	<li class="active"><a href="shop.html">SHOP</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+  				<li id="cartPage"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+		     	<li class="dropdown userDropdown">
+		     		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		     			<span class="glyphicon glyphicon-user"></span>
+		     		</a>
+		     		<ul class="dropdown-content dropdown-menu no_padding" id="userDetails">
+				        <li><a href="login.html">Login</a></li>
+				        <li><a href="signup-backup.html">New User? Register here</a></li>
+			        </ul>
+		     	</li>
+			</ul>
+		  </div>
+		</nav>
+	</div>
+	<!-- END OF HEADER SECTION -->
+
+	<!-- BODY SECTION -->
+	<div class="col-xs-12 no_padding bodySection">
+		<div class="col-xs-3 leftSection">
+			<div class="col-xs-10 filterCategories" id="filterPriceRange">
+				<div class="filterHeader">
+					<h3>Price Range</h3>
+				</div>
+				<div class="filterBody">
+					<ul>
+						<li><input type="radio" valOne=1.00 valTwo=5.00 name="costrange"><span>$1.00 - $5.00</span></li> <!--Janhavi-->
+						<li><input type="radio" valOne=5.01 valTwo=7.00 name="costrange"><span>$5.01 - $7.00</span></li> <!--Janhavi-->
+						<li><input type="radio" valOne=7.01 valTwo=10.00 name="costrange"><span>$7.01 - $10.00</span></span></li> <!--Janhavi-->
+						<li><input type="radio" valOne=10.01 valTwo=15.00 name="costrange"><span>$10.01 - $15.00</span></li> <!--Janhavi-->
+						<li><input type="radio" valOne=15.01 valTwo=20.00 name="costrange"><span>$15.01 - $20.00</span></li> <!--Janhavi-->
+						<li><input type="radio" valOne=20.01 valTwo=100.00 name="costrange"><span>> $20</span></li> <!--Janhavi-->
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-10 filterCategories" id="filterGenre">
+				<div class="filterHeader">
+					<h3>Genres</h3>
+				</div>
+				<div class="filterBody">
+					<ul>
+						<li><input type="checkbox" value="action" name="genreVal"><span>Action</span></li>
+						<li><input type="checkbox" value="comedy" name="genreVal"><span>Comedy</span></li>
+						<li><input type="checkbox" value="drama" name="genreVal"><span>Drama</span></span></li>
+						<li><input type="checkbox" value="horror" name="genreVal"><span>Horror</span></li>
+						<li><input type="checkbox" value="romance" name="genreVal"><span>Romance</span></li>
+						<li><input type="checkbox" value="sci-fi" name="genreVal"><span>Science Fiction</span></li>
+						<li><input type="checkbox" value="thriller" name="genreVal"><span>Thriller</span></li>
+					</ul>
+				</div>
+			</div>
+			<button class="btn btn-md btn-primary productResultButton" type="button" align="center" id="filter-button">FILTER</button>
+		</div>
+		<div class="col-xs-9 rightSection">
+			<div class="col-xs-12 searchSection">
+				<div class="col-xs-12 searchBlock">
+					<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+    				<button class="btn btn-primary productResultButton" type="button" id="search-button"><i class="glyphicon glyphicon-search"></i></button>
+    				<button class="btn btn-md btn-primary" style="float: right;" type="button" id="addNewProductPage">ADD NEW PRODUCT</button>
+				</div>
+			</div>
+			<div class="col-xs-12 resultSection">
+				<div class="col-xs-12 resultDiv" id="listProcuctsResult">
+					
+				</div>
+				<div class="col-xs-12 paginationBlock">
+					<nav aria-label="Page navigation">
+					  <ul id="paginationProduct" class="pagination"></ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END OF BODY SECTION -->
+
+	<!-- FOOTER SECTION -->
+	<div class="col-xs-12 no_padding footerSection">
+		<label class="control-label">Copyright © 2017 AJ. All Rights Reserved.</label>
+		<div class="col-xs-3 socialMediaIcons">
+			<a href="#"><img src="images/fb.png" alt="facebook" /></a>
+			<a href="#"><img src="images/twitter.png" alt="twitter" /></a>
+			<a href="#"><img src="images/gplus.png" alt="google" /></a>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div id="msgModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title">NOTIFICATION</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-md" data-dismiss="modal" id="shopPageModal">Okay</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+</body>
+</html>

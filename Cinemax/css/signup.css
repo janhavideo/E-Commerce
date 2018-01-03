@@ -1,0 +1,40 @@
+/*.html
+{
+	text-align: center;
+}
+
+.signuppage
+{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.header
+{
+    height: 60px;
+    background-color:black;
+}
+
+.header img
+{
+	padding-top: 2px;
+	padding-left: 2px;
+	height:58px;
+	width: 160px;
+	float: left;
+	
+}
+h2
+{
+	font-size: 30px;
+	text-align: center;
+
+}
+.signup
+{
+	font-size: 20px;
+	display: inline-block;
+	text-align: center;
+}*/
